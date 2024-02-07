@@ -192,7 +192,7 @@ app.post("/uploadBlog", upload.single("image"), async (req, res) => {
   let BlogData = {
     title: req.body.title,
     desc: req.body.desc,
-    image: `http://localhost:8000/uploads/${req.file.filename}`,
+    image: `https://wild-ruby-yoke.cyclic.app/uploads/${req.file.filename}`,
   };
 
   console.log(BlogData);
