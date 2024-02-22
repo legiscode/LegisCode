@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000;
 
 const app = express();
 
-//Middlewaress
+//Middlewares
 const corsOptions = {
   origin: "*",
   credentials: true,
@@ -192,7 +192,7 @@ app.post("/uploadBlog", upload.single("image"), async (req, res) => {
   let BlogData = {
     title: req.body.title,
     desc: req.body.desc,
-    image: `https://wild-ruby-yoke.cyclic.app/uploads/${req.file.filename}`,
+    image: `http://localhost:8000/uploads/${req.file.filename}`,
   };
 
   console.log(BlogData);
